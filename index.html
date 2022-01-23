@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Profile">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Home</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="Home.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.3.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    
+    
+    <script type="application/ld+json">{}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+  </head>
+  <script>
+    const api_url='https://randomuser.me/api/'  
+    async function getISS(){
+            const response = await fetch(api_url);
+            const data = await response.json()
+            const strings = JSON.stringify(data);
+            const info=data.results[0];
+            console.log(info);
+            //const test = JSON.stringify(data.results);
+            const DP= info.picture.large;
+            const DPL= info.picture.large;
+            const nametitle = info.name.title;
+            const namefirst = info.name.first;
+            const namelast = info.name.last;
+            const gender = info.gender;
+            const mail = info.email;
+            const phone = info.phone;
+            const cell = info.cell;
+            const age = info.dob.age;
+            const dob = info.dob.date;
+            const reg = info.registered.age;
+            const addcity = info.location.city;
+            const addstreetno = info.location.street.number;
+            const addstreetname = info.location.street.name;
+            const addstate = info.location.state;
+            const addcountry = info.location.country;
+            const addpostcode = info.location.postcode;
+            const nat = info.nat;
+            const user = info.login.username ;
+            const pass = info.login.password;
+            
+
+            
+            document.getElementById('thumbnail').src = DP;
+            document.getElementById('largepp').src = DPL;
+            document.getElementById('namedom').innerHTML=nametitle+' '+namefirst+' '+namelast;
+            document.getElementById('namedom1').innerHTML=nametitle+' '+namefirst+' '+namelast;
+            document.getElementById('genderdom').textContent=gender;
+            document.getElementById('maildom').textContent=mail;
+            document.getElementById('phonedom').textContent=phone;
+            document.getElementById('celldom').textContent=cell;
+            document.getElementById('agedom').textContent=age;
+            document.getElementById('dobdom').textContent = dob;
+            document.getElementById('regdom').innerHTML = reg + ' Year';
+            document.getElementById('streetdom').innerHTML = addstreetno+' '+addstreetname;
+            document.getElementById('countrydom').innerHTML = addcountry;
+            document.getElementById('statedom').innerHTML = addstate;
+            document.getElementById('postnodom').innerHTML = addpostcode;
+            document.getElementById('natdom').innerHTML = nat;
+           // document.getElementById('userdom').textContent = user;
+            //document.getElementById('passdom').textContent = pass;
+
+            
+
+
+
+
+        }
+            getISS();
+        
+    </script>
+  <body data-home-page="Home.html" data-home-page-title="Home" class="u-body"><header class="u-clearfix u-header u-header" id="sec-9ecd"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <a href="https://nicepage.com" class="u-hidden-xs u-image u-logo u-image-1" data-image-width="1280" data-image-height="1280">
+          <img src="images/thumb.png" class="u-logo-image u-logo-image-1" id="thumbnail">
+        </a>
+        <h3 class="u-headline u-text u-text-default u-text-1">
+          <a href="/"><span id="namedom1"></span></a>
+        </h3>
+      </div></header>
+    <section class="u-align-center-lg u-align-center-md u-align-center-xl u-align-left-sm u-align-left-xs u-clearfix u-section-1" id="carousel_5eee">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-1">Profile</h1>
+        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center-md u-align-left-sm u-align-left-xs u-container-style u-image u-layout-cell u-size-20 u-image-1" data-image-width="1280" data-image-height="1280">
+                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                  <img class="u-image u-image-1" src="images/thumb.png" data-image-width="10" data-image-height="10" id="largepp">
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <h4 class="u-text u-text-2">Details</h4>
+                  <p class="u-text u-text-3">
+                    <span style="font-weight: 700;">Name:&nbsp;</span>
+                    <br><span id="namedom"></span><br>
+                    <span style="font-weight: 700;">Age: </span>
+                    <br><span id="agedom"><br><br></span><br>
+                    <span style="font-weight: 700;">Gender:</span>
+                    <br>
+                    <span style="font-weight: 400;"> <span id="genderdom"></span></span>
+                    <br>
+                    <span style="font-weight: 700;">Phone Number:</span>
+                    <br><span id="phonedom"></span><br></span>
+                    <span style="font-weight: 700;"> Cell Number:</span>
+                    <br><span id="celldom"></span><br>
+                    <span style="font-weight: 400;"></span>
+                    <span style="font-weight: 700;">&nbsp;</span>
+                    <br>
+                  </p>
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-3">
+                <div class="u-container-layout u-valign-top u-container-layout-3">
+                  <p class="u-text u-text-4">
+                    <span style="font-weight: 700;">Email:</span>
+                    <br>
+                    <span style="font-weight: 400;"><span id="maildom"></span>
+                    <br>
+                    <span style="font-weight: 700;">Date Of Birth:</span>
+                    <br>
+                    <span style="font-weight: 400;"> <span id="dobdom"></span></span>
+                    <br>
+                    <span style="font-weight: 700;"> Nationality:</span>
+                    <br>
+                    <span style="font-weight: 400;"> <span id="natdom"></span></span>
+                    <br>
+                    <span style="font-weight: 700;">Registered For:</span>
+                    <br>
+                    <span style="font-weight: 400;"><span id="regdom"></span></span>
+                    <br>
+                    <span style="font-weight: 400;">
+                      <span style="font-weight: 700;">Address:</span>
+                    </span>
+                  </p>
+                  <div class="u-container-style u-expanded-width u-group u-white u-group-1">
+                    <div class="u-container-layout u-container-layout-4">
+                      <ul class="u-text u-text-default u-text-5">
+                        <li>
+                          <span style="font-weight: 700;"> Street:&nbsp;<span style="font-weight: 400;"> <span id="streetdom"></span></span>
+                          </span>
+                          <br>
+                        </li>
+                        <li>
+                          <span style="font-weight: 700;"> State:&nbsp;<span style="font-weight: 400;"> <span id="statedom"></span></span>
+                          </span>
+                          <span style="font-weight: 700;">
+                            <br>
+                          </span>
+                        </li>
+                        <li>
+                          <span style="font-weight: 700;"> Country:&nbsp;<span style="font-weight: 400;"> <span id="countrydom"></span></span>
+                          </span>
+                          <span style="font-weight: 700;">
+                            <br>
+                          </span>
+                        </li>
+                        <li>
+                          <span style="font-weight: 700;"> Pin-Code:&nbsp;<span style="font-weight: 400;"> <span id="postnodom"></span></span>
+                          </span>
+                          <span style="font-weight: 700;">
+                            <br>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-7098"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Profile Page<span style="font-weight: 700;"></span>
+        </p>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <p class="u-text">
+        <span>       </span>
+      </p>
+      <a class="u-link">
+      </a>. 
+    </section>
+  </body>
+</html>
